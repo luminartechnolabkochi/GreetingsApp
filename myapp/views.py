@@ -73,4 +73,23 @@ class ActorView(View):
 
 
 
+
+# Coursename:DjangoReactFullstack
+# backendframework:pythondjango
+# frontend:react
+# duration:7month
    
+class CourseDetailView(View):
+
+    def get(self,request,*args,**kwargs):
+
+        data={
+            "title":"DjangoReactFullStack",
+            "backend":"python django",
+            "frontend":"react",
+            "duration":"7month"
+        }
+
+
+        return render(request,"course_detail.html",data)
+

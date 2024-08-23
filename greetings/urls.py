@@ -17,7 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from myapp.views import HelloWorldView,GoodMorningView,GoodAfternoonView,greetings_view,SelfIntroView,ActorView
+from myapp.views import HelloWorldView,GoodMorningView,GoodAfternoonView,greetings_view,SelfIntroView,\
+    ActorView,CourseDetailView
 
 
 
@@ -34,7 +35,10 @@ urlpatterns = [
 
     path("intro/",SelfIntroView.as_view()),
 
-    path("actor/",ActorView.as_view())
+    path("actor/",ActorView.as_view()),
+
+    path("course/",CourseDetailView.as_view())
+
 
 
 ]
